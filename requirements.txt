@@ -1,10 +1,9 @@
 numpy
 pandas
 Flask
-scikit-learn
--f https://download.pytorch.org/whl/torch_stable.html
-torch==1.8.1+cpu 
-torchvision==0.9.1+cpu
 requests
 Pillow
 gunicorn == 20.0.4
+fuzzywuzzy==0.18.0
+Werkzeug==2.2.2
+flask_cors==3.0.10
