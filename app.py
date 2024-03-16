@@ -10,6 +10,8 @@ import boto3
 from io import BytesIO
 from flask_cors import CORS
 import config
+import urllib3
+from urllib3.util.ssl_ import DEFAULT_CIPHERS
 s3 = boto3.client('s3')
 bucket_name = 'mymlmodel1'
 model_key = 'DecisionTree.pkl'
