@@ -21,8 +21,6 @@ response = s3.get_object(Bucket=bucket_name, Key=model_key)
 model_bytes = response['Body'].read()
 
 crop_recommendation_model = pickle.loads(model_bytes)
-# =========================================================================================
-
 app = Flask(__name__)
 CORS(app, methods=['GET', 'POST', 'OPTIONS'])
 # render home page
