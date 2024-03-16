@@ -1,6 +1,4 @@
 from flask import Flask,  jsonify
-import numpy as np
-import pandas as pd
 import requests
 import config
 import pickle
