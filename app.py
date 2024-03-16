@@ -23,7 +23,6 @@ s3 = boto3.client(
 bucket_name = 'mymlmodel1'
 model_key = 'DecisionTree.pkl'
 
-# Load the pickled model file from S3 directly into memory
 response = s3.get_object(Bucket=bucket_name, Key=model_key)
 model_bytes = response['Body'].read()
 
