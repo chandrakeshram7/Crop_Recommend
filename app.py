@@ -1,4 +1,3 @@
-# Importing essential libraries and modules
 from flask import Flask,  jsonify
 import numpy as np
 import pandas as pd
