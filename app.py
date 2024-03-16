@@ -12,7 +12,14 @@ from flask_cors import CORS
 import config
 import urllib3
 from urllib3.util.ssl_ import DEFAULT_CIPHERS
-s3 = boto3.client('s3')
+import os
+aws_access_key_id = os.environ.get('AWS_ACCESS_KEY_ID')
+aws_secret_access_key = os.environ.get('AWS_SECRET_ACCESS_KEY')
+s3 = boto3.client(
+    's3',
+    aws_access_key_id=aws_access_key_id,
+    aws_secret_access_key=aws_secret_access_key
+)
 bucket_name = 'mymlmodel1'
 model_key = 'DecisionTree.pkl'
 
