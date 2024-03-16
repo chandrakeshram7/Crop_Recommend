@@ -20,8 +20,6 @@ model_key = 'DecisionTree.pkl'
 response = s3.get_object(Bucket=bucket_name, Key=model_key)
 model_bytes = response['Body'].read()
 
-# Load the model from the bytes object
-model = pickle.load(BytesIO(model_bytes))
 crop_recommendation_model = pickle.loads(model_bytes)
 # =========================================================================================
 
@@ -52,5 +50,7 @@ def crop_prediction():
 
     return jsonify({"prediction" : final_prediction})
 
-
+from app import app
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
 
