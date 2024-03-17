@@ -45,7 +45,7 @@ def crop_prediction():
     temperature = 27.89
     humidity = 21.232
     
-    data = np.array([[N, P, K, temperature, humidity, ph, rainfall]])
+    data = [[N, P, K, temperature, humidity, ph, rainfall]]
     my_prediction = crop_recommendation_model.predict(data)
     final_prediction = my_prediction[0]
 
