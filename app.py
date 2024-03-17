@@ -26,7 +26,7 @@ model_bytes = response['Body'].read()
 crop_recommendation_model = pickle.loads(model_bytes)
 app = Flask(__name__)
 CORS(app, methods=['GET', 'POST', 'OPTIONS'])
-# render home page
+
 
 
 @ app.route('/')
